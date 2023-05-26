@@ -1,31 +1,44 @@
-// var x=prompt('Ededi daxil edin');
-// if (x > 99 && x < 1000) {
-//     var teklik = x % 10
-//     var onluq = ((x - teklik)/10)%10
-//     var z=onluq*10+teklik
-//     var yuzluk=(x-z)/100
+var game=[
+    {
+        img:"kine.png" ,
+        name:"Kine"
+    },
+    {
+        img:"journey.jpg" ,
+        name:"Journey"
+    },
+    {
+        img:"fortnite.avif" ,
+        name:"Fortnite"
+    },
+    {
+        img:"world.webp" ,
+        name:"World War Z"
+    },
+    {
+        img:"john.jpg" ,
+        name:"John Wick Hex"
+    },
+    {
+        img:"cyberpunk.jpg" ,
+        name:"Cyberpunk 2077"
+    },
+    {
+        img:"abzu.jpg" ,
+        name:"Abzu"
+    },
+    {
+        img:"batman.jpg" ,
+        name:"Batman Arkham City"
+    },
+];
 
-//     if(teklik==onluq && onluq==yuzluk){
-//         alert('Ededin butun reqemleri beraberdir')
-//     }
-//     else{
-//         alert('Ededin reqemleri beraber deyil')
-//     }
-// }
+var result = "";
 
-
-var char = prompt('Simvolu daxil edin');
-switch (char) {
-    case "a":
-        alert("Azerbaycan dili secildi");
-        break;
-    case "r":
-        alert("Rus dili secildi");
-        break;
-    case "e":
-        alert("İngilis dili secildi");
-        break;
-    default:
-        alert("Yanlish sorgu");
-        break;
-} 
+for (let i = 0; i < game.length; i++) {
+    result += ` <div class="game-card mx-3">
+    <img src="./assets/imgs/${game[i].img}" class="card-img-top" alt="...">
+      <p class="mt-2 text-white"> ${game[i].name}</p>
+    </div>`;
+}
+games.innerHTML = result;
